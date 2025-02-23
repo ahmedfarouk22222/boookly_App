@@ -8,14 +8,12 @@ abstract class Styles {
   );
 
   static final textstyle20 = GoogleFonts.eczar(
-    
     fontSize: 20,
     fontWeight: FontWeight.normal,
   );
 
-  static final textstyle30 = GoogleFonts.eczar(
-    
-    fontSize: 30,
+  static final textstyle22 = GoogleFonts.eczar(
+    fontSize: 22,
     fontWeight: FontWeight.normal,
   );
 
@@ -24,8 +22,8 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
   );
 
-  static final textstyle16 = GoogleFonts.openSans(
+  static final textstyle16 = GoogleFonts.montserrat(
     fontSize: 16,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w900,
   );
 }

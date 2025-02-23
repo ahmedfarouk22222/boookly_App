@@ -12,20 +12,26 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30),
-      child: Column(
-          spacing: 20,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomAppbar(),
-            SizedBox(
-                height: MediaQuery.of(context).size.height * 0.3,
-                child: Featurelistviewitem()),
-            Text(
-              'Best Sellers',
-              style: Styles.textstyle18,
-            ),
-            BestSellerItem(),
-          ]),
+      child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        CustomAppbar(),
+        SizedBox(
+          height: 0,
+        ),
+        SizedBox(
+            height: MediaQuery.of(context).size.height * 0.3,
+            child: Featurelistviewitem()),
+        SizedBox(
+          height: 30,
+        ),
+        Text(
+          'Best Sellers',
+          style: Styles.textstyle18,
+        ),
+        SizedBox(
+          height: 30,
+        ),
+        BestSellerItem(),
+      ]),
     );
   }
 }
