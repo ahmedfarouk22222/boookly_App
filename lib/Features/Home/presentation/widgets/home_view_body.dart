@@ -20,7 +20,7 @@ class HomeViewBody extends StatelessWidget {
                 child: Featurelistviewitem()),
             Text(
               'Best Sellers',
-              style: Styles.titleMedium,
+              style: Styles.textstyle18,
             ),
           ]),
     );
