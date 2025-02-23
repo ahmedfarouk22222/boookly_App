@@ -82,3 +82,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+        
+  # To enable null safety, run `dart migrate --apply-changes`.
+  # For more details, see https://dart.dev/null-safety/unsound-null-safety

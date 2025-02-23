@@ -1,26 +1,30 @@
-import 'package:bookly_app/constans.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 abstract class Styles {
-  static const textstyle18 = TextStyle(
+  static final textstyle18 = GoogleFonts.montserrat(
     fontSize: 18,
     fontWeight: FontWeight.w900,
   );
-  static const textstyle20 = TextStyle(
+
+  static final textstyle20 = GoogleFonts.eczar(
+    
     fontSize: 20,
     fontWeight: FontWeight.normal,
-    fontFamily: kGTSectraFine,
   );
-  static const textstyle30 = TextStyle(
+
+  static final textstyle30 = GoogleFonts.eczar(
+    
     fontSize: 30,
     fontWeight: FontWeight.normal,
-    fontFamily: kGTSectraFine,
   );
-  static const textstyle14 = TextStyle(
+
+  static final textstyle14 = GoogleFonts.lato(
     fontSize: 14,
     fontWeight: FontWeight.normal,
   );
-  static const textstyle16 = TextStyle(
+
+  static final textstyle16 = GoogleFonts.openSans(
     fontSize: 16,
     fontWeight: FontWeight.w500,
   );
