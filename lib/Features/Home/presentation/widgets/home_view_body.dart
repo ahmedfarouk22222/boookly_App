@@ -1,4 +1,4 @@
-import 'package:bookly_app/Features/Home/presentation/widgets/custom_Listview_item.dart';
+import 'package:bookly_app/Features/Home/presentation/widgets/feature_listview.dart';
 import 'package:bookly_app/Features/Home/presentation/widgets/custome_appbar.dart';
 import 'package:flutter/material.dart';
 
@@ -9,8 +9,9 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: [
       CustomAppbar(),
-      CustomListviewItem(),
+      SizedBox(
+          height: MediaQuery.of(context).size.height * 0.3,
+          child: Featurelistviewitem()),
     ]);
   }
 }
-
