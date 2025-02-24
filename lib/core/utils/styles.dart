@@ -4,7 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 abstract class Styles {
   static final textstyle18 = GoogleFonts.montserrat(
     fontSize: 18,
-    fontWeight: FontWeight.w900,
+    fontWeight: FontWeight.w500,
   );
 
   static final textstyle20 = GoogleFonts.eczar(
