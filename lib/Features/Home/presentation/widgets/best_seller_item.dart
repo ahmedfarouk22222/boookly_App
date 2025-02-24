@@ -1,8 +1,7 @@
 import 'package:bookly_app/Features/Home/presentation/widgets/book_rating.dart';
-import 'package:bookly_app/Features/Home/presentation/widgets/custom_listview_item.dart.dart';
+import 'package:bookly_app/Features/Home/presentation/widgets/custom_book_image.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({
@@ -15,7 +14,7 @@ class BestSellerItem extends StatelessWidget {
       children: [
         SizedBox(
           height: 125,
-          child: CustomListViewItem(),
+          child: CustomBookImage(),
         ),
         SizedBox(width: 30),
         Expanded(
@@ -49,4 +48,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-
