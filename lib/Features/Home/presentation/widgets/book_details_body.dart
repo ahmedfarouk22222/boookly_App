@@ -33,7 +33,9 @@ class BookDetailsBody extends StatelessWidget {
           ),
         ),
         SizedBox(height: 10),
-        BookRaiting(),
+        BookRaiting(
+          mainAxisAlignment: MainAxisAlignment.center,
+        ),
       ],
     );
   }
