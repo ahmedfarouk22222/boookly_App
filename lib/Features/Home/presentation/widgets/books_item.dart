@@ -4,7 +4,7 @@ import 'package:bookly_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({
+  const BestSellerItem.BooksItem({
     super.key,
   });
 
