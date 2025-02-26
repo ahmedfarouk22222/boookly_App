@@ -8,7 +8,7 @@ final class FeturedbooksInitial extends FeturedbooksState {}
 final class FeturedbooksLoading extends FeturedbooksState {}
 
 final class FeturedbooksSuccess extends FeturedbooksState {
-  final List<BookModel> books;
+  final BookModel books;
 
   FeturedbooksSuccess(this.books);
 }
