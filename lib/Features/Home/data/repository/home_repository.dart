@@ -25,4 +25,30 @@ class HomeRepository {
       );
     }
   }
+
+  Future<Either<Failure, BookModel>> getNewBooks(
+    String filter,
+    String query,
+    String orderBy,
+    int maxResults,
+  ) async {
+    try {
+      final response = await webServices.getNewBooks(
+        filter,
+        query,
+        orderBy,
+        maxResults,
+      );
+      return Right(response);
+    } catch (e) {
+      if (e is DioException) {
+        return Left(
+          (ServerFailure.fromDioError(e)),
+        );
+      }
+      return Left(
+        Failure(e.toString()),
+      );
+    }
+  }
 }

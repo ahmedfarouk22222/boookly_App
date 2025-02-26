@@ -11,5 +11,15 @@ abstract class WebServices {
 
   @GET("volumes")
    Future<BookModel> getallBooks(@Query("q") String query);
+   @GET("volumes")
+Future<BookModel> getNewBooks(
+  @Query("filter") String filter ,
+  @Query("q") String query ,
+  @Query("orderBy") String orderBy,
+  @Query("maxResults") int maxResults ,
+);
+
+
   
 }
+
