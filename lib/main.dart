@@ -1,9 +1,11 @@
 import 'package:bookly_app/core/constans/constans.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
+import 'package:bookly_app/core/utils/injection.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
+  initGitit();
   return runApp(BooklyApp());
 }
 

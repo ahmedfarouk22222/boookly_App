@@ -6,7 +6,7 @@ import 'package:meta/meta.dart';
 part 'newstbooks_state.dart';
 
 class NewstbooksCubit extends Cubit<NewstbooksState> {
-  NewstbooksCubit(this.homeRepository) : super(NewstbooksInitial());
+  NewstbooksCubit(this.homeRepository): super(NewstbooksInitial());
   final HomeRepository homeRepository;
   Future getNewBooks(String filter, String query, String orderBy, int maxResults) async {
     emit(NewstbooksLoading());

@@ -7,9 +7,9 @@ import 'package:dio/dio.dart';
 
 class HomeRepository {
   final WebServices webServices;
-  HomeRepository({
-    required this.webServices,
-  });
+  HomeRepository(
+     this.webServices,
+  );
   Future<Either<Failure, BookModel>> getallBooks(String query) async {
     try {
       final response = await webServices.getallBooks(query);
