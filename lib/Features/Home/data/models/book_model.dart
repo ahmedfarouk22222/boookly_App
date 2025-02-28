@@ -56,6 +56,7 @@ class VolumeInfo {
   String? previewLink;
   String? infoLink;
   String? canonicalVolumeLink;
+   List<String>? authors;
 
   VolumeInfo({
     this.title,
@@ -74,6 +75,7 @@ class VolumeInfo {
     this.previewLink,
     this.infoLink,
     this.canonicalVolumeLink,
+    this.authors
   });
   factory VolumeInfo.fromJson(Map<String, dynamic> json) =>
       _$VolumeInfoFromJson(json);

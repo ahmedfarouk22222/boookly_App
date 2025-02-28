@@ -18,6 +18,13 @@ Future<BookModel> getNewBooks(
   @Query("orderBy") String orderBy,
   @Query("maxResults") int maxResults ,
 );
+@GET("volumes")
+Future<BookModel> getSimilarBooks(
+  @Query("filter") String filter ,
+  @Query("q") String query ,
+  @Query("orderBy") String orderBy,
+  @Query("maxResults") int maxResults ,
+);
 
 
   

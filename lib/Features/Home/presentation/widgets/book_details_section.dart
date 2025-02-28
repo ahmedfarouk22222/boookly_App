@@ -17,7 +17,7 @@ class BookDetailsSection extends StatelessWidget {
         Center(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: width * .30),
-            child: CustomBookImage(),
+            child: CustomBookImage(urlImage: 'assets/images/th.jpeg',),
           ),
         ),
         SizedBox(height: 40),
@@ -41,11 +41,10 @@ class BookDetailsSection extends StatelessWidget {
           ),
         ),
         SizedBox(height: 15),
-        Center(
-          child: BookRaiting(mainAxisAlignment: MainAxisAlignment.center),
-        ),
+      /*  Center(
+          child: BookRaiting(mainAxisAlignment: MainAxisAlignment.center),  ),
         SizedBox(height: 30),
-        BooxAction(),
+        BooxAction(),*/
       ],
     );
   }

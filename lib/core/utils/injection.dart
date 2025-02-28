@@ -6,22 +6,36 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;
-void initGitit() {
-  getIt.registerLazySingleton<FeturedbooksCubit>(
-      () => FeturedbooksCubit(getIt()));
-  getIt.registerLazySingleton<NewstbooksCubit>(() => NewstbooksCubit(getIt()));
 
-  getIt.registerLazySingleton<HomeRepository>(() => HomeRepository(getIt()));
-  getIt.registerLazySingleton<WebServices>(() => WebServices(diosetup()));
+void initGetIt() {
+  // Register Dio first
+  getIt.registerLazySingleton<Dio>(() => setupDio());
+
+  // Register services
+  getIt.registerLazySingleton<WebServices>(() => WebServices(getIt<Dio>()));
+
+  // Register repositories
+  getIt.registerLazySingleton<HomeRepository>(
+      () => HomeRepository(getIt<WebServices>()));
+
+  // Register Cubits
+  getIt.registerLazySingleton<FeturedbooksCubit>(
+      () => FeturedbooksCubit(getIt<HomeRepository>()));
+  getIt.registerLazySingleton<NewstbooksCubit>(
+      () => NewstbooksCubit(getIt<HomeRepository>()));
 }
 
-Dio diosetup() {
+Dio setupDio() {
   Dio dio = Dio();
   dio.options = BaseOptions(
     connectTimeout: Duration(seconds: 60),
     receiveTimeout: Duration(seconds: 60),
   );
   dio.interceptors.add(LogInterceptor(
-      requestBody: true, error: true, request: true, responseBody: true));
+    request: true,
+    requestBody: true,
+    responseBody: true,
+    error: true,
+  ));
   return dio;
 }

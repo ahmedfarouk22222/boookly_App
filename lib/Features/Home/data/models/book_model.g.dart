@@ -74,6 +74,8 @@ VolumeInfo _$VolumeInfoFromJson(Map<String, dynamic> json) => VolumeInfo(
       previewLink: json['previewLink'] as String?,
       infoLink: json['infoLink'] as String?,
       canonicalVolumeLink: json['canonicalVolumeLink'] as String?,
+      authors:
+          (json['authors'] as List<dynamic>?)?.map((e) => e as String).toList(),
     );
 
 Map<String, dynamic> _$VolumeInfoToJson(VolumeInfo instance) =>
@@ -94,6 +96,7 @@ Map<String, dynamic> _$VolumeInfoToJson(VolumeInfo instance) =>
       'previewLink': instance.previewLink,
       'infoLink': instance.infoLink,
       'canonicalVolumeLink': instance.canonicalVolumeLink,
+      'authors': instance.authors,
     };
 
 IndustryIdentifiers _$IndustryIdentifiersFromJson(Map<String, dynamic> json) =>
