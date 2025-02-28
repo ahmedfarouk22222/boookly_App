@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/Home/busines_logic/cubits/fetured_books_cubit/cubit/feturedbooks_cubit.dart';
 import 'package:bookly_app/Features/Home/busines_logic/cubits/newsbookCubit/cubit/newstbooks_cubit.dart';
+import 'package:bookly_app/Features/Home/busines_logic/cubits/similar_books_cubits/cubit/similarbooks_cubit.dart';
 import 'package:bookly_app/core/constans/constans.dart';
 import 'package:bookly_app/core/utils/app_router.dart';
 import 'package:bookly_app/core/utils/injection.dart';
@@ -21,6 +22,7 @@ class BooklyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => getIt<FeturedbooksCubit>()),
          BlocProvider(create: (context) => getIt<NewstbooksCubit>()),
+         
 
       ],
       child: MaterialApp.router(

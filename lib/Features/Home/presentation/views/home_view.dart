@@ -19,9 +19,7 @@ class _HomeViewState extends State<HomeView> {
     context
         .read<NewstbooksCubit>()
         .getNewBooks('free-ebooks', 'programming', 'newest', 40);
-         context
-        .read<NewstbooksCubit>()
-        .getNewBooks('free-ebooks', 'programming', 'newest', 40);
+        
 
   }
 

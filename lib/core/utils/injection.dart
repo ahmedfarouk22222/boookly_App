@@ -1,5 +1,6 @@
 import 'package:bookly_app/Features/Home/busines_logic/cubits/fetured_books_cubit/cubit/feturedbooks_cubit.dart';
 import 'package:bookly_app/Features/Home/busines_logic/cubits/newsbookCubit/cubit/newstbooks_cubit.dart';
+import 'package:bookly_app/Features/Home/busines_logic/cubits/similar_books_cubits/cubit/similarbooks_cubit.dart';
 import 'package:bookly_app/Features/Home/data/repository/home_repository.dart';
 import 'package:bookly_app/Features/Home/data/services/webservices.dart';
 import 'package:dio/dio.dart';
@@ -23,6 +24,8 @@ void initGetIt() {
       () => FeturedbooksCubit(getIt<HomeRepository>()));
   getIt.registerLazySingleton<NewstbooksCubit>(
       () => NewstbooksCubit(getIt<HomeRepository>()));
+       getIt.registerLazySingleton<SimilarbooksCubit>(
+      () => SimilarbooksCubit(getIt<HomeRepository>()));
 }
 
 Dio setupDio() {
